@@ -13,11 +13,11 @@
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.13.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^2.1.3",
     "sass": "^1.63.4",
+    "semver": "^7.5.2",
     "web-vitals": "^2.1.4"
   },
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -42,20 +42,18 @@
       "last 1 safari version"
     ]
   },
-  
-    "babel": {
-      "presets": [
-        "@babel/preset-react"
-      ],
-      "plugins": [
-        "@babel/plugin-proposal-class-properties"
-      ]
-    },
-    "resolutions": {
-      "browserslist": "4.6.2",
-      "caniuse-lite": "1.0.30000974"
-    },
-
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "resolutions": {
+    "browserslist": "4.6.2",
+    "caniuse-lite": "1.0.30000974"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
