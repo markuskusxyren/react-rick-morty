@@ -6,7 +6,6 @@ const Location = () => {
   const [id, setId] = useState(1);
   const [info, setInfo] = useState([]);
   const [results, setResults] = useState([]);
-  const [locations, setLocations] = useState([]);
   const { name, type, dimension } = info;
   const api = `https://rickandmortyapi.com/api/location/${id}`;
 
@@ -32,25 +31,6 @@ const Location = () => {
       setLocations(locationsData.results);
     })();
   }, []);
-
-  const filterCardsByLocation = async (locationId) => {
-    if (locationId === '') {
-      const data = await fetch(api).then((res) => res.json());
-      setInfo(data);
-
-      let a = await Promise.all(
-        data.residents.map((X) => {
-          return fetch(X).then((res) => res.json());
-        })
-      );
-      setResults(a);
-    } else {
-      const locationApi = `https://rickandmortyapi.com/api/location/${locationId}`;
-      const locationData = await fetch(locationApi).then((res) => res.json());
-      setInfo(locationData);
-      setResults([]);
-    }
-  };
 
   return (
     <div className="container">
