@@ -23,15 +23,6 @@ const Location = () => {
     })();
   }, [api]);
 
-  useEffect(() => {
-    (async function () {
-      const locationsData = await fetch(
-        'https://rickandmortyapi.com/api/location/'
-      ).then((res) => res.json());
-      setLocations(locationsData.results);
-    })();
-  }, []);
-
   return (
     <div className="container">
       <div className="row">
